@@ -9,11 +9,8 @@ export function FeaturedProducts({ products }: { products: Product[] }) {
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
             <h2 className="font-display text-xl font-semibold sm:text-2xl">
-              Seçilmiş məhsullar
+              Windows və Office Proqramları
             </h2>
-            <p className="mt-1.5 text-sm text-text-muted">
-              Ən çox satılan və endirimli lisenziyalar
-            </p>
           </div>
           <Link
             href="/products"

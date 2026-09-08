@@ -1,4 +1,4 @@
-import { products, getFeaturedProducts as _getFeaturedProducts } from "@/lib/mock-data";
+import { products, getFeaturedProducts as _getFeaturedProducts, getBundleProducts as _getBundleProducts } from "@/lib/mock-data";
 import type { Product, CategorySlug } from "@/lib/types";
 
 // Servis qatı: server komponentləri VƏ route handler-lər eyni funksiyaları
@@ -31,4 +31,8 @@ export async function getProduct(slug: string): Promise<Product | null> {
 
 export async function getFeaturedProducts(limit = 4): Promise<Product[]> {
   return _getFeaturedProducts(limit);
+}
+
+export async function getBundleProducts(): Promise<Product[]> {
+  return _getBundleProducts();
 }

@@ -25,9 +25,9 @@ export function CategoryStrip({ categories }: { categories: Category[] }) {
               <Link
                 key={category.id}
                 href={`/products?category=${category.slug}`}
-                className="group flex min-w-[168px] flex-col gap-3 rounded-xl border border-border bg-surface p-4 transition-colors hover:border-border-strong md:min-w-0"
+                className="group flex min-w-[210px] items-center gap-3 rounded-xl border border-border bg-surface p-4 transition-colors hover:border-border-strong md:min-w-0"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-2 text-text transition-colors group-hover:text-cyan">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-2 text-text transition-colors group-hover:text-cyan">
                   <Icon width={20} height={20} />
                 </span>
                 <span>

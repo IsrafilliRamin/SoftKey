@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { categoryIconMap } from "./icons";
 import type { CategorySlug, Product } from "@/lib/types";
 
@@ -25,6 +26,20 @@ const accentText: Record<Product["accent"], string> = {
 };
 
 export function ProductCover({ product }: { product: Product }) {
+  if (product.image) {
+    return (
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl bg-surface-2">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   const Icon = categoryIconMap[categoryToIcon[product.categorySlug]];
 
   return (

@@ -7,7 +7,7 @@ import { HowItWorks } from "@/components/home/HowItWorks";
 import { Testimonials } from "@/components/home/Testimonials";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { listCategories } from "@/lib/services/category-service";
-import { getFeaturedProducts } from "@/lib/services/product-service";
+import { getBundleProducts } from "@/lib/services/product-service";
 import { testimonials } from "@/lib/mock-data";
 
 export const metadata: Metadata = {
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 // Server komponenti: render zamanı servis qatından (hazırda fake API/mock)
 // data çəkilir. Beləliklə səhifə tam SSR ilə HTML kimi çatdırılır.
 export default async function HomePage() {
-  const [categories, featuredProducts] = await Promise.all([
+  const [categories, bundleProducts] = await Promise.all([
     listCategories(),
-    getFeaturedProducts(8),
+    getBundleProducts(),
   ]);
 
   const jsonLd = {
@@ -43,12 +43,12 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Hero />
       <CategoryStrip categories={categories} />
-      <FeaturedProducts products={featuredProducts} />
+      <Hero />
+      <FeaturedProducts products={bundleProducts} />
       <TrustFeatures />
       <HowItWorks />
-      <Testimonials items={testimonials} />
+     {/*  <Testimonials items={testimonials} /> */}
       <CtaBanner />
     </>
   );

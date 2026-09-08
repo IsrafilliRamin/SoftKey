@@ -89,7 +89,7 @@ function HeroKeyIllustration() {
       <div className="relative flex h-[86%] w-[86%] items-center justify-center rounded-[28%] border border-border-strong bg-surface/90 shadow-lift backdrop-blur">
         <svg
           viewBox="0 0 340 165"
-          className="h-2/3 w-2/=3"
+          className="h-2/3 w-2/3"
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>

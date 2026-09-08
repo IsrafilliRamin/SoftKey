@@ -37,6 +37,10 @@ export interface Product {
   badge?: "yeni" | "trend" | "endirim" | "son-hebler";
   accent: "gold" | "cyan" | "violet" | "rose";
   features: string[];
+  /** Real ürün qutu görseli (public/images/products altında). Verilmezse abstrakt gradient cover göstərilir. */
+  image?: string;
+  /** Windows + Office bundle bölməsində göstərilsin deyə işarə. */
+  isBundle?: boolean;
 }
 
 export interface Testimonial {
