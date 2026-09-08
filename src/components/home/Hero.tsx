@@ -20,60 +20,56 @@ export function Hero() {
         }}
       />
 
-      <div className="container-page relative py-16 md:py-20 lg:py-24">
-        <div className="max-w-3xl">
-          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-text-muted">
+      <div className="container-page relative grid gap-10 py-16 md:py-20 lg:grid-cols-[3fr_7fr] lg:items-center lg:py-24">
+        <div>
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-text-muted">
             <ZapIcon width={13} height={13} className="text-gold" />
             Ödənişdən 90 saniyə sonra açarınız qutudadır
           </span>
 
-          <h1 className="text-balance font-display text-4xl font-semibold leading-[1.08] tracking-tight text-text sm:text-5xl">
+          <h1 className="text-balance font-display text-2xl font-semibold leading-[1.15] tracking-tight text-text sm:text-3xl">
             Proqram lisenziyaları, gizli ödəniş yoxdur, sadəcə açar.
           </h1>
+
+          <p className="mt-4 text-balance text-sm leading-relaxed text-text-muted sm:text-base">
+            Windows, Office, antivirus, dizayn və oyun açarlarını rəsmi
+            qiymətlərdən əlverişli əldə edin — sifarişdən dərhal sonra
+            e-poçtunuza və hesabınıza rəqəmsal təhvil verilir.
+          </p>
+
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 rounded-lg bg-text px-4 py-2.5 text-sm font-medium text-bg transition-transform hover:opacity-90 active:scale-[0.98]"
+            >
+              Məhsullara bax
+              <ArrowRightIcon width={16} height={16} />
+            </Link>
+            <a
+              href="#nece-isleyir"
+              className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-text transition-colors hover:border-border-strong"
+            >
+              Necə işləyir?
+            </a>
+          </div>
+
+          <dl className="mt-8 grid grid-cols-3 gap-4 border-t border-border pt-5">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <dt className="sr-only">{stat.label}</dt>
+                <dd className="font-display text-base font-semibold text-text sm:text-lg">
+                  {stat.value}
+                </dd>
+                <dd className="mt-1 text-[11px] text-text-muted sm:text-xs">
+                  {stat.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-[3fr_7fr] lg:items-center">
-          <div>
-            <p className="text-balance text-base leading-relaxed text-text-muted sm:text-lg">
-              Windows, Office, antivirus, dizayn və oyun açarlarını rəsmi
-              qiymətlərdən əlverişli əldə edin — sifarişdən dərhal sonra
-              e-poçtunuza və hesabınıza rəqəmsal təhvil verilir.
-            </p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link
-                href="/products"
-                className="inline-flex items-center gap-2 rounded-lg bg-text px-5 py-3 text-sm font-medium text-bg transition-transform hover:opacity-90 active:scale-[0.98]"
-              >
-                Məhsullara bax
-                <ArrowRightIcon width={16} height={16} />
-              </Link>
-              <a
-                href="#nece-isleyir"
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-3 text-sm font-medium text-text transition-colors hover:border-border-strong"
-              >
-                Necə işləyir?
-              </a>
-            </div>
-
-            <dl className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-6">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <dt className="sr-only">{stat.label}</dt>
-                  <dd className="font-display text-xl font-semibold text-text sm:text-2xl">
-                    {stat.value}
-                  </dd>
-                  <dd className="mt-1 text-xs text-text-muted sm:text-sm">
-                    {stat.label}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-
-          <div className="hidden lg:block">
-            <HeroSlider />
-          </div>
+        <div>
+          <HeroSlider />
         </div>
       </div>
     </section>
