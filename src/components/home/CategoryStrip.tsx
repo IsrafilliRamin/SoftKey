@@ -6,17 +6,17 @@ export function CategoryStrip({ categories }: { categories: Category[] }) {
   return (
     <section className="border-b border-border py-12">
       <div className="container-page">
-        <div className="mb-6 flex items-end justify-between gap-4">
-         {/*  <h2 className="font-display text-xl font-semibold sm:text-2xl">
+        {/* <div className="mb-6 flex items-end justify-between gap-4">
+          <h2 className="font-display text-xl font-semibold sm:text-2xl">
             Kateqoriyalar
-          </h2> */}
+          </h2>
           <Link
             href="/products"
             className="text-sm font-medium text-text-muted transition-colors hover:text-text"
           >
             Hamısına bax
           </Link>
-        </div>
+        </div> */}
 
         <div className="-mx-5 flex gap-3 overflow-x-auto px-5 pb-2 md:mx-0 md:grid md:grid-cols-3 md:gap-4 md:overflow-visible md:px-0 lg:grid-cols-6">
           {categories.map((category) => {
