@@ -7,9 +7,9 @@ export function CategoryStrip({ categories }: { categories: Category[] }) {
     <section className="border-b border-border py-12">
       <div className="container-page">
         <div className="mb-6 flex items-end justify-between gap-4">
-          <h2 className="font-display text-xl font-semibold sm:text-2xl">
+         {/*  <h2 className="font-display text-xl font-semibold sm:text-2xl">
             Kateqoriyalar
-          </h2>
+          </h2> */}
           <Link
             href="/products"
             className="text-sm font-medium text-text-muted transition-colors hover:text-text"
