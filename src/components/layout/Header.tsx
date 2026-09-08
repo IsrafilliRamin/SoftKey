@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useCartStore } from "@/store/useCartStore";
 import { useUIStore } from "@/store/useUIStore";
 import { ThemeToggle } from "./ThemeToggle";
-import { CartIcon, KeyLogoIcon, MenuIcon } from "@/components/ui/icons";
+import { CartIcon, KeyLogoIcon, MenuIcon, UserIcon } from "@/components/ui/icons";
 import clsx from "clsx";
 
 const navLinks = [
@@ -30,7 +30,7 @@ export function Header() {
             <KeyLogoIcon width={19} height={19} strokeWidth={2} />
           </span>
           <span className="font-display text-lg font-semibold tracking-tight">
-            Soft<span className="text-gold">Key</span>
+            Açar<span className="text-gold">Bazar</span>
           </span>
         </Link>
 
@@ -60,15 +60,10 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Link
             href="/login"
-            className="hidden rounded-lg px-3.5 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text sm:block"
+            aria-label="Hesab"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-text-muted transition-colors hover:border-border-strong hover:text-text"
           >
-            Daxil ol
-          </Link>
-          <Link
-            href="/register"
-            className="hidden rounded-lg border border-border px-3.5 py-2 text-sm font-medium transition-colors hover:border-border-strong sm:block"
-          >
-            Qeydiyyat
+            <UserIcon width={18} height={18} />
           </Link>
 
           <ThemeToggle />

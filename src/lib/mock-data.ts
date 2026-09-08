@@ -156,7 +156,7 @@ export const products: Product[] = [
     features: ["Windows 10 Pro açarı", "Office 2016 Pro Plus açarı", "E-poçtla ani göndəriş"],
   },
   {
-    id: "b-1",
+    id: "b-6",
     slug: "windows-11-pro-office-2021-pro-plus",
     name: "Windows 11 Pro + Office 2021 Pro Plus",
     brand: "Microsoft",
@@ -176,7 +176,7 @@ export const products: Product[] = [
     features: ["Windows 11 Pro açarı", "Office 2021 Pro Plus açarı", "Ömürlük aktivasiya"],
   },
   {
-    id: "b-2",
+    id: "b-7",
     slug: "windows-10-pro-office-2019-pro-plus",
     name: "Windows 10 Pro + Office 2019 Pro Plus",
     brand: "Microsoft",
@@ -196,7 +196,7 @@ export const products: Product[] = [
     features: ["Windows 10 Pro açarı", "Office 2019 Pro Plus açarı", "E-poçtla ani göndəriş"],
   },
   {
-    id: "b-3",
+    id: "b-8",
     slug: "windows-11-pro-office-2019-pro-plus",
     name: "Windows 11 Pro + Office 2019 Pro Plus",
     brand: "Microsoft",
