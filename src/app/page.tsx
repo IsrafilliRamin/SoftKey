@@ -48,7 +48,7 @@ export default async function HomePage() {
       <FeaturedProducts products={bundleProducts} />
       <TrustFeatures />
       <HowItWorks />
-      <Testimonials items={testimonials} />
+     {/*  <Testimonials items={testimonials} /> */}
       <CtaBanner />
     </>
   );
