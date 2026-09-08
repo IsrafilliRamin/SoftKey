@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRightIcon, ZapIcon, CheckIcon } from "@/components/ui/icons";
+import { ArrowRightIcon, ZapIcon } from "@/components/ui/icons";
+import { HeroSlider } from "./HeroSlider";
 
 const stats = [
   { value: "18,000+", label: "təhvil edilmiş açar" },
@@ -67,58 +68,10 @@ export function Hero() {
           </dl>
         </div>
 
-        <div className="relative mx-auto hidden aspect-square w-full max-w-md lg:block">
-          <HeroKeyIllustration />
+        <div className="hidden lg:block">
+          <HeroSlider />
         </div>
       </div>
     </section>
-  );
-}
-
-function HeroKeyIllustration() {
-  return (
-    <div className="relative flex h-full w-full items-center justify-center">
-      <div
-        aria-hidden="true"
-        className="absolute inset-6 rounded-full opacity-60 blur-3xl"
-        style={{
-          background:
-            "conic-gradient(from 180deg, var(--color-gold), var(--color-cyan), var(--color-violet), var(--color-gold))",
-        }}
-      />
-      <div className="relative flex h-[86%] w-[86%] items-center justify-center rounded-[28%] border border-border-strong bg-surface/90 shadow-lift backdrop-blur">
-        <svg
-          viewBox="0 0 340 165"
-          className="h-2/3 w-2/3"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <linearGradient id="keyGrad" x1="75" y1="140" x2="265" y2="70">
-              <stop offset="0%" style={{ stopColor: "var(--color-gold)" }} />
-              <stop offset="100%" style={{ stopColor: "var(--color-cyan)" }} />
-            </linearGradient>
-          </defs>
-          {/* Bow: filled ring (evenodd donut) */}
-          <path
-            fillRule="evenodd"
-            fill="url(#keyGrad)"
-            d="M175,100 A45,45 0 1,0 85,100 A45,45 0 1,0 175,100 Z M157,100 A27,27 0 1,0 103,100 A27,27 0 1,0 157,100 Z"
-          />
-          {/* Shaft */}
-          <rect x="175" y="92.5" width="95" height="15" rx="2" fill="url(#keyGrad)" />
-          {/* Bit teeth */}
-          <rect x="235" y="107.5" width="10" height="22.5" rx="1.5" fill="url(#keyGrad)" />
-          <rect x="252.5" y="107.5" width="10" height="32.5" rx="1.5" fill="url(#keyGrad)" />
-        </svg>
-
-        <span className="absolute right-6 top-6 flex items-center gap-1.5 rounded-full bg-success/15 px-2.5 py-1 text-[11px] font-medium text-success">
-          <CheckIcon width={12} height={12} />
-          Doğrulanmış
-        </span>
-        <span className="absolute bottom-6 left-6 rounded-full border border-border bg-bg-elevated px-2.5 py-1 text-[11px] font-medium text-text-muted">
-          #WIN11-●●●●-●●●●
-        </span>
-      </div>
-    </div>
   );
 }
