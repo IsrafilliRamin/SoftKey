@@ -1,0 +1,238 @@
+import type { Category, Product, Testimonial } from "./types";
+
+// Bu fayl hazırkı mərhələdə "fake backend" rolunu oynayır.
+// Növbəti mərhələdə bu massivlər real verilənlər bazası
+// sorğuları (Prisma/Drizzle və s.) ilə əvəz olunacaq —
+// route handler-lərin (src/app/api/**) imzası dəyişməyəcək.
+
+export const categories: Category[] = [
+  {
+    id: "cat-1",
+    slug: "emeliyyat-sistemleri",
+    name: "Əməliyyat sistemləri",
+    description: "Windows 10, 11 və server lisenziyaları",
+    icon: "windows",
+    productCount: 12,
+  },
+  {
+    id: "cat-2",
+    slug: "ofis",
+    name: "Ofis proqramları",
+    description: "Microsoft Office paketləri",
+    icon: "office",
+    productCount: 8,
+  },
+  {
+    id: "cat-3",
+    slug: "antivirus",
+    name: "Antivirus və Təhlükəsizlik",
+    description: "Cihazlarınızı qoruyun",
+    icon: "shield",
+    productCount: 10,
+  },
+  {
+    id: "cat-4",
+    slug: "dizayn",
+    name: "Dizayn və Yaradıcılıq",
+    description: "Adobe və digər kreativ alətlər",
+    icon: "brush",
+    productCount: 6,
+  },
+  {
+    id: "cat-5",
+    slug: "oyun",
+    name: "Oyun platformaları",
+    description: "Steam, Xbox və digər açarlar",
+    icon: "gamepad",
+    productCount: 14,
+  },
+  {
+    id: "cat-6",
+    slug: "bulud-vpn",
+    name: "Bulud və VPN",
+    description: "Saxlama və məxfilik xidmətləri",
+    icon: "cloud",
+    productCount: 5,
+  },
+];
+
+export const products: Product[] = [
+  {
+    id: "p-1",
+    slug: "windows-11-pro",
+    name: "Windows 11 Pro",
+    brand: "Microsoft",
+    categorySlug: "emeliyyat-sistemleri",
+    shortDescription: "Rəsmi rəqəmsal lisenziya, ömürlük aktivasiya.",
+    price: 39.9,
+    oldPrice: 69.9,
+    currency: "AZN",
+    rating: 4.8,
+    reviewCount: 612,
+    stock: 148,
+    delivery: "ani",
+    badge: "trend",
+    accent: "cyan",
+    features: ["Ömürlük aktivasiya", "1 PC üçün", "Rəsmi Microsoft açarı"],
+  },
+  {
+    id: "p-2",
+    slug: "office-2021-professional-plus",
+    name: "Office 2021 Professional Plus",
+    brand: "Microsoft",
+    categorySlug: "ofis",
+    shortDescription: "Word, Excel, PowerPoint və digərləri — birdəfəlik ödəniş.",
+    price: 54.9,
+    oldPrice: 89.9,
+    currency: "AZN",
+    rating: 4.7,
+    reviewCount: 489,
+    stock: 96,
+    delivery: "ani",
+    badge: "endirim",
+    accent: "gold",
+    features: ["Abunə deyil, ömürlük", "1 PC üçün", "Bütün əsas tətbiqlər"],
+  },
+  {
+    id: "p-3",
+    slug: "kaspersky-total-security",
+    name: "Kaspersky Total Security",
+    brand: "Kaspersky",
+    categorySlug: "antivirus",
+    shortDescription: "3 cihaz, 1 il tam qoruma.",
+    price: 24.9,
+    currency: "AZN",
+    rating: 4.6,
+    reviewCount: 203,
+    stock: 220,
+    delivery: "ani",
+    accent: "violet",
+    features: ["3 cihaz", "1 il lisenziya", "Real-time qoruma"],
+  },
+  {
+    id: "p-4",
+    slug: "adobe-creative-cloud",
+    name: "Adobe Creative Cloud",
+    brand: "Adobe",
+    categorySlug: "dizayn",
+    shortDescription: "Photoshop, Illustrator və bütün Adobe alətləri — 1 il.",
+    price: 149.0,
+    oldPrice: 199.0,
+    currency: "AZN",
+    rating: 4.9,
+    reviewCount: 157,
+    stock: 40,
+    delivery: "email",
+    badge: "yeni",
+    accent: "rose",
+    features: ["20+ tətbiq", "100GB bulud yaddaş", "1 il abunəlik"],
+  },
+  {
+    id: "p-5",
+    slug: "steam-cuzdan-50",
+    name: "Steam Cüzdan Kodu — 50₼",
+    brand: "Steam",
+    categorySlug: "oyun",
+    shortDescription: "İstənilən oyunu almaq üçün universal balans.",
+    price: 50.0,
+    currency: "AZN",
+    rating: 4.9,
+    reviewCount: 891,
+    stock: 500,
+    delivery: "ani",
+    badge: "trend",
+    accent: "cyan",
+    features: ["Ani kod təhvili", "Region: Qlobal", "İstifadə müddəti yoxdur"],
+  },
+  {
+    id: "p-6",
+    slug: "nordvpn-2-il",
+    name: "NordVPN — 2 illik",
+    brand: "NordVPN",
+    categorySlug: "bulud-vpn",
+    shortDescription: "Sürətli və təhlükəsiz internet, 6 cihaz.",
+    price: 89.0,
+    oldPrice: 249.0,
+    currency: "AZN",
+    rating: 4.5,
+    reviewCount: 132,
+    stock: 60,
+    delivery: "email",
+    badge: "endirim",
+    accent: "gold",
+    features: ["6 cihaz", "24 ay", "No-log siyasəti"],
+  },
+  {
+    id: "p-7",
+    slug: "windows-10-home",
+    name: "Windows 10 Home",
+    brand: "Microsoft",
+    categorySlug: "emeliyyat-sistemleri",
+    shortDescription: "Etibarlı və sürətli əməliyyat sistemi.",
+    price: 29.9,
+    oldPrice: 49.9,
+    currency: "AZN",
+    rating: 4.6,
+    reviewCount: 340,
+    stock: 180,
+    delivery: "ani",
+    accent: "violet",
+    features: ["Ömürlük aktivasiya", "1 PC üçün", "Rəsmi açar"],
+  },
+  {
+    id: "p-8",
+    slug: "microsoft-365-family",
+    name: "Microsoft 365 Family",
+    brand: "Microsoft",
+    categorySlug: "ofis",
+    shortDescription: "6 istifadəçiyə qədər, 1TB bulud yaddaş hər biri üçün.",
+    price: 64.9,
+    currency: "AZN",
+    rating: 4.7,
+    reviewCount: 210,
+    stock: 75,
+    delivery: "email",
+    badge: "yeni",
+    accent: "cyan",
+    features: ["6 istifadəçi", "1 il", "1TB OneDrive/hər biri"],
+  },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    id: "t-1",
+    name: "Rəşad M.",
+    role: "Freelance dizayner",
+    quote:
+      "Sifariş verdikdən 2 dəqiqə sonra açarı aldım və birbaşa aktivləşdirdim. Çox rahat idi.",
+    rating: 5,
+  },
+  {
+    id: "t-2",
+    name: "Nərmin Ə.",
+    role: "Kiçik biznes sahibi",
+    quote:
+      "Ofisdəki bütün kompüterlər üçün buradan aldım, dəstək komandası hər sualıma tez cavab verdi.",
+    rating: 5,
+  },
+  {
+    id: "t-3",
+    name: "Tural S.",
+    role: "IT mütəxəssisi",
+    quote:
+      "Qiymətlər əla, açarlar rəsmi və sınaqdan keçirdim — heç bir problem yaşamadım.",
+    rating: 4,
+  },
+];
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
+
+export function getCategoryBySlug(slug: string): Category | undefined {
+  return categories.find((c) => c.slug === slug);
+}
+
+export function getFeaturedProducts(limit = 4): Product[] {
+  return products.filter((p) => p.badge).slice(0, limit);
+}
