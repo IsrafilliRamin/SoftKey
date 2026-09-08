@@ -30,7 +30,7 @@ export function Header() {
             <KeyLogoIcon width={19} height={19} strokeWidth={2} />
           </span>
           <span className="font-display text-lg font-semibold tracking-tight">
-            Açar<span className="text-gold">Bazar</span>
+            Soft<span className="text-gold">Key</span>
           </span>
         </Link>
 

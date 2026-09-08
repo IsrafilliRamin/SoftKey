@@ -38,7 +38,7 @@ export function MobileNav() {
               <KeyLogoIcon width={16} height={16} strokeWidth={2} />
             </span>
             <span className="font-display text-base font-semibold">
-              Açar<span className="text-gold">Bazar</span>
+              Soft<span className="text-gold">Key</span>
             </span>
           </span>
           <button

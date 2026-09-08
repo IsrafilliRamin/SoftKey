@@ -13,7 +13,7 @@ import { testimonials } from "@/lib/mock-data";
 export const metadata: Metadata = {
   title: "Ana səhifə",
   description:
-    "AçarBazar — Windows, Office, antivirus, Adobe və oyun açarlarını rəsmi qiymətlərdən ucuz, ani rəqəmsal təhvillə əldə edin.",
+    "Soft Key — Windows, Office, antivirus, Adobe və oyun açarlarını rəsmi qiymətlərdən ucuz, ani rəqəmsal təhvillə əldə edin.",
 };
 
 // Server komponenti: render zamanı servis qatından (hazırda fake API/mock)
@@ -27,11 +27,11 @@ export default async function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "AçarBazar",
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://acarbazar.az",
+    name: "Soft Key",
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://softkey.az",
     potentialAction: {
       "@type": "SearchAction",
-      target: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://acarbazar.az"}/products?q={search_term_string}`,
+      target: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://softkey.az"}/products?q={search_term_string}`,
       "query-input": "required name=search_term_string",
     },
   };
@@ -48,7 +48,7 @@ export default async function HomePage() {
       <FeaturedProducts products={bundleProducts} />
       <TrustFeatures />
       <HowItWorks />
-      {/* <Testimonials items={testimonials} /> */}
+      <Testimonials items={testimonials} />
       <CtaBanner />
     </>
   );

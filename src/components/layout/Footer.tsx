@@ -39,7 +39,7 @@ export function Footer() {
               <KeyLogoIcon width={19} height={19} strokeWidth={2} />
             </span>
             <span className="font-display text-lg font-semibold">
-              Açar<span className="text-gold">Bazar</span>
+              Soft<span className="text-gold">Key</span>
             </span>
           </Link>
           <p className="max-w-xs text-sm text-text-muted">
@@ -82,7 +82,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="container-page flex flex-col items-center justify-between gap-3 py-5 text-xs text-text-faint sm:flex-row">
-          <p>© {new Date().getFullYear()} AçarBazar. Bütün hüquqlar qorunur.</p>
+          <p>© {new Date().getFullYear()} Soft Key. Bütün hüquqlar qorunur.</p>
           <p>Bu, nümayiş məqsədli tərtibatdır · fake API ilə işləyir</p>
         </div>
       </div>

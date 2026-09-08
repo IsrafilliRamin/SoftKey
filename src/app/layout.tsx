@@ -19,13 +19,13 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://acarbazar.az";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://softkey.az";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "AçarBazar — Rəsmi proqram lisenziyaları və rəqəmsal açarlar",
-    template: "%s · AçarBazar",
+    default: "Soft Key — Rəsmi proqram lisenziyaları və rəqəmsal açarlar",
+    template: "%s · Soft Key",
   },
   description:
     "Windows, Office, antivirus, Adobe və oyun açarlarını rəsmi qiymətlərdən ucuz, ani rəqəmsal təhvillə əldə edin.",
@@ -37,19 +37,19 @@ export const metadata: Metadata = {
     "antivirus lisenziyası",
     "steam kod",
   ],
-  authors: [{ name: "AçarBazar" }],
+  authors: [{ name: "Soft Key" }],
   openGraph: {
     type: "website",
     locale: "az_AZ",
     url: siteUrl,
-    siteName: "AçarBazar",
-    title: "AçarBazar — Rəsmi proqram lisenziyaları və rəqəmsal açarlar",
+    siteName: "Soft Key",
+    title: "Soft Key — Rəsmi proqram lisenziyaları və rəqəmsal açarlar",
     description:
       "Windows, Office, antivirus, Adobe və oyun açarlarını rəsmi qiymətlərdən ucuz, ani rəqəmsal təhvillə əldə edin.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AçarBazar — Rəsmi proqram lisenziyaları",
+    title: "Soft Key — Rəsmi proqram lisenziyaları",
     description:
       "Windows, Office, antivirus, Adobe və oyun açarlarını ani rəqəmsal təhvillə əldə edin.",
   },
